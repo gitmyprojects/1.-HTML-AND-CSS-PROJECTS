@@ -1,0 +1,216 @@
+RESTFUL AND APIS
+
+RESTful involves the creation of APIs in an exact manner.
+
+
+As a reminder, an API is an “Application Programming Interface.”
+
+
+On the web, an API is essentially a description of how one program can use the Internet to request certain things from another program. It is a set of clearly defined methods of communication between various software components.
+
+
+As an example, we could have a program out on a web server that maintains weather forecasts and makes those forecasts available to programs on other computers.
+
+
+In order to make this system work, the creators of the “weather forecasting” program would have to publish instructions that programmers could use if they wanted to have their programs make use of the weather forecasting program.
+
+
+To do this, they would think of the various things people might want from their program, and create a name for each thing. Examples might be:
+
+
+Get a 1-day forecast for a specific city
+
+Get a 1-day forecast for a specific ZIP code
+
+Get a 7-day forecast for a specific city
+
+Get a 7-day forecast for a specific ZIP code
+
+Each of these things would need a separate API.
+
+
+They would publish a description of each API, including how to format a request for that thing, and what the data would look like that would be sent to the requesting computer.
+
+
+The object they are describing is actually called an “endpoint.” This is because it is at the end of a line connecting the requesting computer with the providing computer.
+
+
+The endpoint has a precise format defined for the requests it receives, and the responses it creates.
+
+
+An endpoint has a URL, since it’s something that can be identified and accessed over the Internet.
+
+
+In our weather forecasting example, the URL for an endpoint might look something like this:
+
+
+http://weatherforecast.com/api/oneday/ZIP/95437
+
+
+Or
+
+
+http://weatherforecast.com/api/sevenday/city/Chicago
+
+
+If you used a browser to access that first API, the HTTP request might look like this:
+
+
+GET /api/oneday/ZIP/95437
+
+Host: www.weatherforcast.com
+
+Accept-Language: en-us
+
+
+The HTTP response might look like this:
+
+
+HTTP/1.1 200 OK
+
+Date: Sat, 25 May 2019 12:38:53 GMT
+
+
+{
+
+        “ZIP”: 95437
+
+        “Date”: “05 25 2019”
+
+        “High Temperature”: “77F”
+
+}
+
+Back to the concept of RESTful. Here, we create APIs that enable us to access and change the state of various resources using HTTP messages and verbs.
+
+
+There is no change to how HTTP works – we format our messages the same way, and we use the same verbs.
+
+
+What changes, though, is that we use those messages and verbs in an agreed-upon manner so that we create APIs for other programs to use to access and modify the state of the resources our program is concerned with.
+
+
+We do this by creating, in our program, various services that perform the actions we want other programs to be able to request.
+
+
+Using our “example school” as an example, we might want to create a service for other programs to be able to use to create students – and another service for other programs to be able to use to modify student information.
+
+
+In RESTful, we are concerned with resources – but the word “resources” is being used in a slightly different manner than the usual meaning for web sites. Instead of talking about the various items that a browser might need in order to render a web page, instead we are talking about the objects or things that a computer program might want to create and modify.
+
+
+In our “example school” example, our program is concerned with creating and modifying students - so those are our resources for the purpose of a RESTful system. In other words, we are creating a service in our program that can create, modify and delete students. We might call this service “StudentService.”
+
+
+This service will have a URL. It might be something like this:
+
+
+http://www.exampleschool.com/api/StudentService
+
+
+There will be one or more functions available from this service. Often we will create one function for accessing all resources, and another function for creating, modifying or deleting an individual resource.
+
+
+Each function in the service will have its own URL. In our example, the URLs might look like this:
+
+
+http://www.exampleschool.com/api/StudentService/Students
+http://www.exampleschool.com/api/StudentService/Student
+
+To use this API in the RESTful system, we have to think in this manner: “What resource am I concerned with, and what do I want to do to that resource?”
+
+In a RESTful system, in order to perform the various actions we want (create, modify, or delete a student) we make a request to the URL of the service, changing the HTTP verb to reflect what we want done to the resource.
+
+
+In simple terms, we use the HTTP verbs in this fashion:
+
+
+GET: retrieve information about a specified resource
+
+POST: create a specified resource
+
+PUT: modify a specified resource
+
+DELETE: delete a specified resource
+
+The GET verb is pretty straightforward. Let’s use it in an example where we want to allow other programs to get a list of all students. The URL for that might be:
+
+
+http://www.exampleschool.com/api/StudentService/Students
+
+
+If we send an HTTP message to that URL with an HTTP verb of GET, we will receive a list of all students.
+
+
+Let’s look at an example where we want to get data about a specific student. The URL for that might be:
+
+
+http://www.exampleschool.com/api/StudentService/Student/:studentId
+
+
+Here, the HTTP request would use a GET verb. The request would also include the studentId for the student whose data we want.
+
+Now let’s look at creating a resource – in our case, a new student.
+
+
+Again, in RESTful we identify a resource and use the HTTP verb to indicate what we want to happen with that resource.
+
+
+In this case, we identify the resource by calling the appropriate endpoint in our service:
+
+
+http://www.exampleschool.com/api/StudentService/Student
+
+
+In this case, however, we will change the HTTP verb to POST, so that we are creating a new resource, and we will put the information needed to create that new resource in the body of the HTTP message. The HTTP message might look like this:
+
+
+POST /api/StudentService/Student
+
+Host: www.exampleschool.com
+
+Accept-Language: en-us
+
+
+firstName=Billy&lastName=Bart&GPA=2.43
+
+
+When this message is received by the server, the data in the body of the message will be used to create a new student. This happens because the programmer who made the service sets it up that way, as part of making their program conform with this idea of a RESTful system.
+
+
+The response often includes data that will be useful in tracking the state of the various resources that the program is tracking. In this case, the HTTP response would likely include the studentId for the newly-created student “Billy Bart,” as that studentId would have just been created by the program that has the Student service.
+
+DELETE is pretty straightforward – it would use the same URL, but include the HTTP verb DELETE. Additionally, a piece of data that would identify the specific resource to be deleted would be in the body of the message. The HTTP message might look like this:
+
+
+DELETE /api/StudentService/Student
+
+Host: www.exampleschool.com
+
+Accept-Language: en-us
+
+
+studentId=24
+
+
+When this message is received by the server, the data in the body of the message will be used to delete the student with an ID of 24.
+
+
+Finally, let’s look at the use of the PUT verb to modify the state of a specified resource. If we wanted to change the first name of a specified student from “Billy” to “William,” the HTTP message might look like this:
+
+
+PUT /api/StudentService/Student
+
+Host: www.exampleschool.com
+
+Accept-Language: en-us
+
+
+studentId=24&firstName=William
+
+
+When this message is received by the server, the data in the body of the message will be used to change the first name of the student with an ID of 24 from “Billy” to “William.”
+
+
+By creating the APIs of your programs to conform to RESTful principles, you enable the tracking and control of the state of the things in your program, even though the HTTP protocol you’re using isn’t stateful by itself.
+

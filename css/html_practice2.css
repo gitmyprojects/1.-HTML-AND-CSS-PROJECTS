@@ -1,0 +1,35 @@
+h1 {
+	text-align:center;
+}
+
+h1:hover {
+	text-shadow: 2px 2px #FF0000;
+}
+
+table {
+	width: 100%;
+	border: 1px solid gold;
+}
+
+td:hover {
+	background-color: green;
+	color: purple;
+}
+
+tr, th {
+	background-color: black;
+	color: cornsilk;
+}
+
+tr, td {
+	background-color: darkgreen;
+	color= white;
+}
+
+ol {
+	list-style-type: upper-roman;
+}
+
+ul {
+	list-style-type: square;
+}

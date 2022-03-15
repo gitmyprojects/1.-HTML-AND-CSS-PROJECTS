@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="author" content="Neil Javier">
+		<title>Hello, World!</title>
+		<link rel="stylesheet" type="text/css" href="./css/html_practice2.css">
+	</head>
+	<body>
+		<!-- bookmarked with the # sign -->
+		<p><a href="#video">Go to the video</a></p>
+		
+		<!-- TABLES -->
+		<h1>Table Practice</h1>
+		<table>
+			<tr>
+			<!-- Table headers are bold and centered by default -->
+				<th>Name</th>
+				<th>Phone Number</th>
+				<th>Email</th>
+				<th>Notes</th>
+			</tr>
+			
+			<tr>
+				<td>Jon Snow</td>
+				<td>5032343966</td>
+				<td>winterishere@thenorth.com</td>
+				<td>King of the North</td>
+			</tr>
+			
+			<tr>
+				<td>Daenerys Targaryen</td>
+				<td>9712343966</td>
+				<td>motherofdragons@ironthrone.com</td>
+				<td>The Mad Queen</td>
+			</tr>
+		</table>
+			
+		<!-- LISTS -->	
+		<h1>List Practice</h1>
+			<!-- ORDERED -->
+			<ol>
+				<li>Milk</li>
+				<li>Bread</li>
+				<li>Eggs</li>
+				<li>Cheese</li>
+			</ol>
+			<!-- UNORDERED -->
+			<ul>
+				<li>Cats</li>
+				<li>Dogs</li>
+				<li>Snakes</li>
+				<li>Birds</li>
+			</ul>
+		<!-- SPAN -->
+		<p>
+			His wife had <span style="color:green;font-weight:bold">green</span> eyes,<br>
+			his children had <span style="color:blue;font-weight:bold">blue</span> eyes,<br>
+			but his eyes were <span style="color:brown;font-weight:bold">brown.</span>
+		</p>
+		
+		<!-- non breaking space -->
+		<p>.....&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;heres&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;......Johnny!</p>
+		
+		<!-- the form and input tags allow for the site to take in user input -->
+		<form action="" method="GET">
+			First Name: <input type="text" name="First_Name"><br>
+			Last Name: <input type="text" name="Last_Name"><br>
+			<input type="submit" value="whatever you like">
+		</form>
+		
+		<!-- the details tag creates a drop down option -->
+		<h1>The details element</h1>
+		<details>
+		  <summary>Epcot Center</summary>
+		  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+		</details>
+		
+		<!-- the video tag is another option of embedding a video. I also gave this video an id -->
+		<video width="320" height="240" controls id="video">
+			<source src="./images/waves.mp4" type="video/mp4">
+			Looks like your browser does not support the video tag - use Google Chrome!
+		</video>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- The meta tag gives the search engine information about the page
+		In the tag below, name tells the search engine what type of data and 
+		content is the actual data for the name. This is important to remember
+		because im making it easier for a search engine to find pages
+		with me as the author -->
+		<meta charset="UTF-8" name="author" content="Neil Javier">
+		<title>Hello, World!</title>
+		<link rel="stylesheet" type="text/css" href="./css/html_practice1.css">
+	</head>
+		<nav>
+		<a href="html_practice1.html">Home</a> |
+		<a href="implicit_img_path.html">Image</a> |
+		<a href="https://youtu.be/wupToqz1e2g">Video</a> |
+		</nav>
+	<!-- this is an example of the style element overriding the div element  -->
+	<style>
+		p {
+		color:red;
+		}
+	</style>
+	<body>
+		<p>Hello, World!</p>
+		<main><!-- There should only be one 'main' element per html page -->
+			<h1>Let's talk programming</h1>
+			<p>Here im using the 'main' tag to expand upon the central topic of the site.<br>
+			In this case, programming is the main topic.</p>
+		</main>
+		
+		<!-- explicit file path  -->
+		<a href="https://gitmyprojects.github.io/">Learn more about my experience in programming!</a><!-- I want to revist why the image displays above the anchor element-->
+		
+		<!-- implicit file path-->
+		<a href="implicit_img_path.html"><h3>Little bit softer now</h3></a>
+		
+		<h6>little bit softer now</h6>
+		<img src="C:\Users\goong\Documents\Github Projects\1.-HTML-AND-CSS-PROJECTS\images\shh.jpg" alt="quiet face" class="center-image">
+		
+		<!-- Here i utilize different attributes within the 'font' element -->
+		<p><font color="#66CDAA" face="impact" size="6">Here is a quote from Carl Sagan:</font></p>
+		
+		<blockquote cite="https://www.goodreads.com/author/quotes/10538.Carl_Sagan">
+		Somewhere, something incredible is waiting to be known.
+		</blockquote>
+		
+		<!-- Here is practice using the div tag to style everything with the tag -->
+		<div style="color:blue">
+			<h3>This is the heading</h3>
+			<p>this is the text</p>
+		</div>
+		
+		<!-- this is an example of a class overriding the style tag above -->
+		<p class="my_style">This is my style</p>
+		
+		<footer><i>This is the footer and will be worked on later &copy;</i></footer>
+	</body>
+</html>

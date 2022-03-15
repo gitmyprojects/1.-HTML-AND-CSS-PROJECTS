@@ -1,0 +1,135 @@
+images/picture.jpg and ./images/picture.jpg – where the picture file is located in a folder called images on the same folder level as the requesting file.
+
+../images/picture.jpg – where the picture file is located in a folder called images which is in the folder one level up from the current folder of the requesting file.
+
+It is recommended that you use relative paths when linking to images, CSS files, JavaScript files, etc. 
+The reason for this is that if your code is run on a different machine,
+the absolute path may change – but the relative path always stays the same.
+
+An anchor element with an implicit href attribute would be written as follows:
+
+<a href="yourfilename.html">Title of link</a>
+
+Whereas an explicit href attribute links to a file not contained within the folder(s) associated with your website. 
+Typically, explicit href attribute links are to external websites (other websites).
+The href attribute from the previous step (<a href="https://www.learncodinganywhere.com/"> Check out The Tech Academy!</a>) is an example of an explicit link.
+
+The <nav> tag defines a set of navigation links. Navigation links are typically included on nav bars (a rectangular strip that includes links to the main pages on a website).
+Typically the nav element contains implicit links – meaning links on most nav bars on websites don’t usually take you to another website altogether.
+
+AJAX stands for Asynchronous JavaScript and XML.
+
+Asynchronous means “broken down into separate pieces/occurrences without a set pattern.”
+
+AJAX is a set of tools that can be used in creating asynchronous functions for web sites.
+
+This is where AJAX can come in. Instead of requesting that the entire page be recreated, 
+the creator of the web site can make it so that just the new content is requested from the web server.
+
+
+The way this works is that user action triggers an asynchronous request to the web server for JUST a specific section of the web page.
+It is asynchronous in that it is not tied to the full “request” – “response” – “page display” process used for a full web page.
+
+
+XHR stands for XML HTTP Request.
+
+
+XHR is a set of APIs that can be used by some scripting languages (such as JavaScript). It is used to transfer XML (and other such data) to and from a web server using HyperText Transfer Protocol.
+
+
+XHR works by establishing a communication path between a web page's client-side and server-side and can be used to transmit many different types of data accurately (including HTML, XML, JSON, etc.).
+
+
+EXAMPLE: Google Maps uses XHR in transmitting data (maps, directions, etc.) to and from your computer.
+
+
+A key technology term is “state.” It basically means, “the condition or status of a thing at a specific point in time.”
+
+A node is a point where lines meet; it is where paths intersect. In computers, there are two main types of nodes:
+
+
+A node is something connected to a network. If several computers are joined together, each computer is considered a node. 
+In a set of data that is organized into a hierarchical (based on rank) structure, a node is any individual element in that structure.
+
+A node is a simple structure that holds data and links to other nodes.
+
+To assign a font color to an element (such as a paragraph) you write your code as follows:
+<p><font color="green">This is the affected text</font></p>
+
+The face attribute assigns a font type used with the font element.
+The size attribute can be assigns from 1-7
+
+NOTE: In this image, $0 is included. That is a command specific to Google Chrome.
+
+
+The $0, $1, $2, $3 and $4 commands work as a historical reference to the last five DOM elements inspected within the Elements panel
+ or the last five JavaScript heap objects selected in the Profiles panel. $0 returns the most recently selected element or JavaScript object,
+ $1 returns the second most recently selected one, and so on.
+
+RGB color codes: https://www.w3schools.com/colors/colors_rgb.asp
+
+The <div> tags define a division or a section in an HTML document. 
+The div element is often used as a container for other HTML elements to style them or make specific changes to the content within that particular div tag.
+
+CSS colors:
+https://www.w3schools.com/cssref/css_colors.asp
+
+“Stylesheet” is a common value used following the rel attribute. The stylesheet value imports the specified stylesheet.
+
+
+Type is an attribute of the <link> element that tells the browser the kind of resource you are linking to. 
+	For example: if you were linking to an audio file, you would write type=”audio” within the element. 
+When linking CSS files, we use the type value “text/css.”
+
+To center an image, set left and right margin to auto and make it into a block element
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+Note that it cannot be centered if the width is set to 100% (full-width).
+
+Table headers are bold and centered by default.
+
+Html entities are characters like the copy symbol
+
+A non-breaking space is a space that will not break into a new line. Two words separated by a non-breaking space will stick together. 
+This can be useful when breaking the words might be disruptive.
+
+https://www.learncodinganywhere.com/Student/PageView/ViewPage?courseId=101&pageNumber=203
+
+verbs and methods are the same thing in HTTP
+	GET, PUT-alter rescorces on the file(update info), POST-deliver a file to the server and have it saved, DELETE-remove
+
+The PUT verb is idempotent(An operation that will produce the same result even if it is performed multiple times.).
+The POST verb is non-idempotent.
+
+As covered earlier, the HTTP protocol is stateless – meaning, the server maintains no record of what operations have happened on it, so you can’t use the sending of these various HTTP messages back and forth to know the state of any particular resource on the server.
+However, it is valuable for computer programs to know and modify the state of the various resources that the program is concerned with.
+
+
+In order to facilitate this, a system was created that can use the HTTP protocol to be used to monitor and control the state of these various resources.
+
+
+This system is called “RESTful.” “REST” stands for “Representational State Transfer.”
+
+The <form> tag is used to create a form that allows users to input data. Here is a typical way to write the <form> tag:
+
+<form action="" method="POST">
+
+The action attribute specifies where to send form-data when a form is submitted.
+
+
+The method attribute specifies how to send form-data (while the action attribute gives the page to send the form-data to). The method attribute can contain GET or POST.
+
+add the 'target' attribute to an anchor with a href if you want a new tab in the same window to appear when clicked. target="new"
+
+the 'em' tag emphasis text
+
+In creating a website, your planning should include two major elements:
+
+
+The overall structure of the collection – that is, what pages connect to other pages; and
+
+The graphical layout of each page
+
+ Header tags improve the readability and SEO of a webpage.
+
