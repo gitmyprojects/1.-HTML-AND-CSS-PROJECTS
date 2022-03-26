@@ -130,6 +130,22 @@ In creating a website, your planning should include two major elements:
 The overall structure of the collection – that is, what pages connect to other pages; and
 
 The graphical layout of each page
+Header tags improve the readability and SEO of a webpage.
 
- Header tags improve the readability and SEO of a webpage.
+If a container is 600px the then the elements inside are limited to that boundry
+	meaning, if i make a p tag 50 PERCENT wide, it would be 50% of the 600px because
+	it is inside the container as opposed to 50% of the whole page. 
 
+Also called Gaussian smoothing, Gaussian blur is an effect named after the French mathematician Carl Friedrich Gauss.
+
+text-shadow attribute consists of 4 parameters. the first is the x axis, the second is the y axis
+the third is the Gaussian blur
+	the 'a' in rgba is alpha and represents transparancy. 
+
+The CSS visibility property specifies whether or not an element is visible.
+
+
+Values, such as visible and hidden, are used with it to direct the browser to display (or not display) the element to the user.
+
+I noticed, the css sheet is ordered in the way that the cooresponding html page is laid out. 
+SO if you style the parent, you then style the child.
